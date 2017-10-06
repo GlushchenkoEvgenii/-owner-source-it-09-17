@@ -1,0 +1,32 @@
+public interface HomeWork6 {
+
+        int getNumber() throws  DBExeption;
+        void TestMethod1() throws RuntimeException;
+    }
+____________________________________________
+
+public class HomeWork6Impl implements HomeWork6 {
+
+    @Override
+    public int getNumber() {
+        try {
+            throw  new DBExeption();
+        } catch (DBExeption dbExeption) {
+            dbExeption.printStackTrace();
+        }
+        return 0;
+    }
+
+    @Override
+    public void TestMethod1() throws RuntimeException {
+        throw new RuntimeException();
+
+    }
+}
+_______________________________________________________________
+
+public class DBExeption  extends Exception {
+    public DBExeption () {
+    }
+
+}
